@@ -1,0 +1,87 @@
+@import "../../global.scss";
+
+.contact {
+  background-color: $background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+ 
+
+ 
+  h1{
+    color: $periwinkle;
+    font-size: 50px;
+    padding-bottom: 50px;
+   
+  }
+
+  .text{
+
+    color: $grey;
+    font-size: 18px;
+    text-align: center;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    padding-bottom: 50px;
+    line-height:  1.5em;
+
+    @include for-phone-only {
+        max-width: 90%;
+    }
+    
+
+  }
+
+  div.buttons {
+    flex-direction: column;
+    color: $green;
+    
+
+    .button {
+      margin: 20px 20px 0 0;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+  .resumeButton {
+    background-color: none;
+    color:$green;
+    border: 1px solid $green;
+    border-radius: 4px;
+    text-decoration: none;
+    width: 60px;
+    margin: 20px 20px 0 0;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    padding: 0.5rem 0.75rem;
+
+    &:hover {
+      background-color: $transparentNavyBlue;
+      transform: scale(1.1);
+    }
+  }
+
+
+  .footer{
+    position: absolute;
+    bottom: 20px;
+    color: $periwinkle;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: $codeFont;
+
+  }
+
+}

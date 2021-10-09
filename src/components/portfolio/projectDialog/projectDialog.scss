@@ -1,0 +1,136 @@
+@import "../../../global.scss";
+
+div {
+  .dialog1 {
+    border: 2px solid $green;
+    border-bottom: none;
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      max-height: 100vh;
+
+      .top {
+        flex: 3;
+        width: 100%;
+        max-height: 200px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .bottom {
+        flex: 7;
+        padding: 20px;
+        background-color: $navyBlue;
+        color: $periwinkle;
+
+        h2 {
+          color: $green;
+        }
+        h1 {
+          color: $white;
+        }
+
+        p {
+          padding-bottom: 10px;
+        }
+
+        .technologies {
+          display: flex;
+          flex-flow: row wrap;
+          max-width: 70%;
+
+          p {
+            margin-right: 10px;
+            color: $grey;
+          }
+
+          i {
+            font-size: 30px;
+            margin: 5px;
+          }
+
+          padding-bottom: 10px;
+        }
+
+        div.buttons {
+          flex-direction: row;
+          color: $green;
+          display: flex;
+          justify-content: left;
+          align-items: center;
+
+          .button {
+            display: flex;
+            background-color: rgb(39, 39, 39);
+            color: $white;
+            padding: 5px;
+            padding-top: 10px;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            border-radius: 4px;
+            width: 30%;
+            margin: 20px 20px 0 0;
+            cursor: pointer;
+
+            p{
+              margin-left: 10px;
+              
+            }
+
+            @include for-phone-only {
+              width: 60%;
+
+              p{
+                font-size: 12px;
+              }
+
+              
+              
+            }
+
+            @include for-desktop-up {
+              display: flex;
+            }
+            // transition: all 0.3 ease;
+
+            &:hover {
+              background-color: rgba(39, 39, 39, 0.8);
+            }
+          }
+        }
+
+        h1 {
+          font-size: 30px;
+          font-weight: 600;
+        }
+
+        h2 {
+          font-size: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  .dialog2 {
+    border: 2px solid $green;
+    border-top: none;
+    background-color: $navyBlue;
+
+    .dialogButton {
+      color: $periwinkle;
+      padding: 5px;
+      border-radius: 4px;
+    }
+  }
+}

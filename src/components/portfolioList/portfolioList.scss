@@ -1,0 +1,34 @@
+@import "../../global.scss";
+
+.portfolioList {
+  font-size: 14px;
+  margin-right: 50px;
+  margin-bottom: 20px;
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: $green;
+  border: 1px solid $green;
+  transition: all 1s ease;
+
+  @include for-phone-only {
+    margin-right: 20px;
+  }
+
+  &.active {
+    background-color: $green;
+    color: $navyBlue;   
+    font-weight: bold; 
+  }
+
+  &:hover {
+    transition: none;
+    background-color: $transparentNavyBlue;
+
+    &.active {
+      background-color: $green;
+    color: $navyBlue;
+    }
+       
+  }
+}

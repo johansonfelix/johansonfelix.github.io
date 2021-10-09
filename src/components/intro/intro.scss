@@ -1,0 +1,257 @@
+@import "../../global.scss";
+
+.intro {
+  background-color: $background;
+  display: flex;
+  z-index: 1;
+  position: relative;
+
+  @include for-phone-only {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    flex: 0.4;
+    overflow: hidden;
+
+    @include for-phone-only {
+      flex: 0.3;
+      overflow: hidden;
+
+    }
+
+    @include for-tablet-portrait-up {
+     flex:0.4;
+     overflow: hidden;
+
+    }
+
+    @include for-tablet-landscape-up {
+      flex: 0.3;
+      overflow: hidden;
+
+    }
+
+    @include for-desktop-up {
+      flex: 0.4;
+      overflow: hidden;
+    }
+    @include for-big-desktop-up {
+      flex: 0.4;
+      overflow: hidden;
+    }
+
+    @include mobile-md {
+      display:none;
+    }
+
+    .imgContainer {
+      margin-top: 70px;
+      width: 700px;
+      height: 95%;
+      // background-color: rgb(220, 20, 60, 0.6);
+      // border-radius: 50%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      float: right;
+      position: relative;
+      overflow: hidden;
+
+      @include for-phone-only {
+        align-items: flex-start;
+      }
+
+      @include for-tablet-portrait-up {
+        align-items: flex-start;
+      }
+
+      @include for-tablet-landscape-up {
+        align-items: flex-start;
+      }
+
+
+      img.blob {
+        height: 90%;
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        opacity: 0.6;
+
+        @include for-phone-only {
+          height: 90%;
+        }
+
+        @include for-tablet-portrait-up {
+          height: 80%;
+        }
+
+        @include for-tablet-landscape-up {
+          height: 90%;
+        }
+
+      }
+      img.coverPicture {
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        z-index: 1;
+
+        @include for-phone-only {
+          height: 90%;
+          bottom: 20px;
+        }
+
+        
+        
+
+        @include for-tablet-landscape-up {
+          height: 90%;
+          bottom: 20px;
+        }
+
+        
+      }
+    }
+  }
+  .right {
+    flex: 0.6;
+    position: relative;
+
+    @include for-phone-only {
+      flex: 0.7;
+    }
+
+    @include for-tablet-portrait-up {
+      flex: 0.7;
+    }
+
+    @include for-tablet-landscape-up {
+      flex: 0.7;
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      padding-left: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+
+      @include for-phone-only {
+        padding-left: 2px;
+        align-items: center;
+      }
+
+      h1 {
+        display: block;
+        overflow: hidden;
+
+        &.name {
+          @include for-phone-only {
+            font-size: 30px;
+          }
+          @include for-tablet-landscape-up {
+            font-size: 50px;
+          }
+        }
+
+        &.desc {
+          font-size: 60px;
+          color: $grey;
+
+          @include for-phone-only {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 25px;
+            text-align: center;
+          }
+
+          @include for-tablet-landscape-up {
+            font-size: 50px;
+          }
+        }
+        font-size: 80px;
+        font-weight: 600;
+        margin: 10px 0 0 0;
+        color: $periwinkle;
+
+        @include for-phone-only {
+          font-size: 40px;
+        }
+      }
+      //greeting
+      h2 {
+        font-size: 18px;
+        font-weight: 400;
+        font-family: $codeFont;
+        color: $green;
+        display: block;
+
+        @include for-phone-only {
+          padding-bottom: 10px;
+        }
+      }
+
+      .introduction {
+        color: $grey;
+        font-size: 20px;
+        margin: 20px 0px 0px;
+        max-width: 640px;
+        line-height: 30px;
+
+        @include for-phone-only {
+          display: flex;
+          justify-content: center;
+
+          font-size: 16px;
+          text-align: justify;
+
+          padding: 0 6px;
+        }
+      }
+    }
+
+    div.buttons {
+      flex-direction: column;
+      color: $green;
+
+      .button {
+        margin: 20px 20px 0 0;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+    .resumeButton {
+      background-color: none;
+      color: $green;
+      border: 1px solid $green;
+      border-radius: 4px;
+      text-decoration: none;
+      width: 10%;
+      margin: 20px 20px 0 0;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      padding: 0.5rem 0.75rem;
+
+      &:hover {
+        background-color: $transparentNavyBlue;
+        transform: scale(1.1);
+      }
+
+      @include for-phone-only {
+        width: 20%;
+      }
+    }
+  }
+}
