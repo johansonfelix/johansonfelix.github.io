@@ -95,11 +95,15 @@ To setup the application on your local environment:
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-
+<h3>Homepage</h3>
 <img src="images/screely-1634703592280.png" width="50%">
+<h3>Full Screen Navigation</h3>
 <img src="images/screely-1634736134449.png" width="50%">
+<h3>About Me Page</h3>
 <img src="images/screely-1634735988046.png" width="50%">
+<h3>Portfolio Page</h3>
 <img src="images/screely-1634736061043.png" width="50%">
+<h3>Contact Me Page</h3>
 <img src="/images/screely-1634736094626.png" width="50%">
 
 
