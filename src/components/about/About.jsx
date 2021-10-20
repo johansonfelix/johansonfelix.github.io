@@ -13,8 +13,7 @@ export default function About() {
             of those around me.
           </p>
           <p className="text2">
-            My interest in Software/Web Development started when I was a curious
-            teenager, wanting to be a scientist - to solve real world
+            My interest in Software/Web Development started when I was a younger, wanting to be a scientist - to solve real world
             problems. My speciality is in building enterprise-level APIs using
             the REST architecture. I am highly proficient in Java, JavaScript, and Python and have a great grasp of Front-End technologies with practice in UI/UX. In my downtime I enjoy music, catching up on
             my favorite Netflix drama series, meditating and trying new cuisine.
