@@ -48,7 +48,7 @@ const Intro = () => {
              <a href="https://github.com/johansonfelix" target="_blank" rel="noreferrer"> <GitHubIcon className="button" /> </a>
               <a href="https://www.linkedin.com/in/johanson-felix-336a94186" target="_blank" rel="noreferrer"> <LinkedInIcon className="button" /></a>
             </div>
-            <a className="resumeButton button" href="https://drive.google.com/file/d/1UwNGrgWKHvRNy8UU888c3Cp3eaJJxy8M/view?usp=sharing" target="_blank" rel="noreferrer">
+            <a className="resumeButton button" href="assets/resume.pdf" target="_blank">
               Resume
             </a>
           </div>
