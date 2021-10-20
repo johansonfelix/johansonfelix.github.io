@@ -16,7 +16,7 @@ export default function About() {
             My interest in Software/Web Development started when I was a curious
             teenager, wanting to be a scientist - to solve real world
             problems. My speciality is in building enterprise-level APIs using
-            the REST architecture. I also dabble in UI/UX design. In my downtime I enjoy music, catching up on
+            the REST architecture. I also have a great grasp of Front-End technologies with practice in UI/UX. In my downtime I enjoy music, catching up on
             my favorite Netflix drama series, meditating and trying new cuisine.
           </p>
           <div className="education">
