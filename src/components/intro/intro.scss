@@ -18,19 +18,16 @@
     @include for-phone-only {
       flex: 0.3;
       overflow: hidden;
-
     }
 
     @include for-tablet-portrait-up {
-     flex:0.4;
-     overflow: hidden;
-
+      flex: 0.4;
+      overflow: hidden;
     }
 
     @include for-tablet-landscape-up {
       flex: 0.3;
       overflow: hidden;
-
     }
 
     @include for-desktop-up {
@@ -43,7 +40,7 @@
     }
 
     @include mobile-md {
-      display:none;
+      display: none;
     }
 
     .imgContainer {
@@ -71,7 +68,6 @@
         align-items: flex-start;
       }
 
-
       img.blob {
         height: 90%;
         position: absolute;
@@ -88,30 +84,28 @@
         }
 
         @include for-tablet-landscape-up {
-          height: 90%;
+          height: 100%;
         }
-
       }
       img.coverPicture {
         position: absolute;
         bottom: 0;
         height: 100%;
         z-index: 1;
-
+    
         @include for-phone-only {
           height: 90%;
           bottom: 20px;
+          justify-content: center;
         }
-
-        
-        
 
         @include for-tablet-landscape-up {
           height: 90%;
           bottom: 20px;
+          left:3em;
+          bottom:0;
+  
         }
-
-        
       }
     }
   }
@@ -214,10 +208,21 @@
         }
       }
     }
+    a {
+      text-decoration: inherit;
+      color: inherit;
+      cursor: pointer;
+
+      &:visited{
+        text-decoration: inherit;
+        color: inherit;
+      }
+    }
 
     div.buttons {
       flex-direction: column;
       color: $green;
+      cursor: pointer;
 
       .button {
         margin: 20px 20px 0 0;
@@ -231,7 +236,7 @@
     }
     .resumeButton {
       background-color: none;
-      color: $green;
+      color: $green !important;
       border: 1px solid $green;
       border-radius: 4px;
       text-decoration: none;

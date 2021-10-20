@@ -16,11 +16,7 @@ const Transition = forwardRef(function Transition(props, ref) {
 });
 
 export default function AlertDialog({
-  title,
-  desc,
-  tech,
-  github,
-  url,
+  data,
   handleClickOpen,
   handleClose,
   open,
@@ -41,39 +37,40 @@ export default function AlertDialog({
             <div className="container">
               <div className="top">
                 <img
-                  src="https://cdn.dribbble.com/users/1387827/screenshots/15466426/media/deb2dca6762cd3610321c98bfccb0b72.png?compress=1&resize=1200x900"
+                  src={data.demoImg}
                   alt=""
                 />
               </div>
               <div className="bottom">
                 <h2>CASE STUDY</h2>
-                <h1>Travisor</h1>
+                <h1>{data.title}</h1>
                 <p className="desc">
-                  Let Google help apps determine location. This means sending
-                  anonymous location data to Google, even when no apps are
-                  running. Lorem ipsum, dolor sit amet consectetur adipisicing
-                  elit. Aut animi eveniet nemo error a quaerat ipsum
-                  necessitatibus dignissimos eligendi! Saepe rerum soluta fugit
-                  libero eveniet expedita sit iure id assumenda?Lorem ipsum,
-                  dolor sit amet consectetur adipisicing elit.
+                  {data.desc}
                 </p>
                 <p>Built with: </p>
                 <div className="technologies">
-                  {technologies.map((t) => (<p>{t}</p>))}
+                  {data?.tech?.map((t) => (
+                    <p>{t}</p>
+                  ))}
                   {/* <i className="devicon-java-plain"></i>
                   <i className="devicon-spring-plain"></i>
                   <i className="devicon-html5-plain"></i>
                   <i className="devicon-css3-plain"></i>
                   <i className="devicon-sass-original"></i> */}
                 </div>
+                
                 <div className="buttons">
+                <a href={data.git} target="_blank" rel="noopener noreferrer">
                   <div className="button">
                     <GitHubIcon /> <p>See Repository</p>
                   </div>
-
-                  <div className="button">
-                    <OpenInNewIcon />  <p>See Live Demo</p>
+                  </a>
+                  <a href={data.demo} target="_blank" rel="noopener noreferrer">
+                  <div className="button">                  
+                    <OpenInNewIcon /> <p>See Live Demo</p>
                   </div>
+                  </a>
+
                 </div>
               </div>
             </div>

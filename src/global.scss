@@ -60,6 +60,17 @@ $logoFont: "Permanent Marker", cursive;
   }
 }
 
+a {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+
+  &:visited{
+    text-decoration: inherit;
+    color: inherit;
+  }
+}
+
 a.arrow {
   position: absolute;
   bottom: 10px;
@@ -78,6 +89,8 @@ a.arrow {
       animation: none;
     }
   }
+
+
 
   @keyframes arrowBlink {
     100% {

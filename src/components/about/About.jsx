@@ -59,7 +59,7 @@ export default function About() {
         </div>
 
         <div className="right">
-          <img src="assets/johanson2.jpeg" alt="" />
+          <img src="assets/johanson2.png" alt="" />
         </div>
       </div>
       <a className="arrow" href="#portfolio">

@@ -3,18 +3,20 @@ import PortfolioList from "../portfolioList/PortfolioList";
 import { useState, useEffect } from "react";
 import ProjectDialog from "./projectDialog/ProjectDialog";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import {
   featuredPortfolio,
-  webPortfolio,
-  mobilePortfolio,
-  designPortfolio,
-  contentPortfolio,
+  javaPortfolio,
+  javaScriptPortfolio,
+  othersPortfolio,
 } from "../../data";
 
 const Portfolio = () => {
   const [selected, setSelected] = useState("featured");
   const [data, setData] = useState([]);
+  const [selectedData, setSelectedData] = useState({})
 
   const list = [
     {
@@ -22,30 +24,25 @@ const Portfolio = () => {
       title: "Featured",
     },
     {
-      id: "web",
-      title: "Web App",
+      id: "java",
+      title: "Java",
     },
     {
-      id: "mobile",
-      title: "Mobile App",
+      id: "javaScript",
+      title: "JavaScript",
     },
+    
     {
-      id: "design",
-      title: "Design",
+      id: "others",
+      title: "Others",
     },
-    {
-      id: "branding",
-      title: "Branding",
-    },
-    {
-      id: "content",
-      title: "Content",
-    },
+    
   ];
 
   const [open, setOpen] = useState(false);
 
-  const handleClickOpen = () => {
+  const handleClickOpen = (data) => {
+    setSelected(data)
     setOpen(true);
   };
 
@@ -59,26 +56,23 @@ const Portfolio = () => {
         setData(featuredPortfolio);
         break;
       }
-      case "web": {
-        setData(webPortfolio);
+      case "java": {
+        setData(javaPortfolio);
         break;
       }
-      case "mobile": {
-        setData(mobilePortfolio);
+      case "javascript": {
+        setData(javaScriptPortfolio);
         break;
       }
-      case "design": {
-        setData(designPortfolio);
+      case "others": {
+        setData(othersPortfolio);
         break;
       }
       /*  case "branding": {
         setData(brandingPortfolio);
         break;
       } */
-      case "content": {
-        setData(contentPortfolio);
-        break;
-      }
+     
       default:
     }
   }, [selected]);
@@ -86,7 +80,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio" id="portfolio">
       <h1>Some things I've Built</h1>
-      <ul>
+     {/*  <ul>
         {list.map((item) => (
           <PortfolioList
             title={item.title}
@@ -96,18 +90,23 @@ const Portfolio = () => {
             key={item.id}
           />
         ))}
-      </ul>
+      </ul> */}
 
       <div className="container">
         {data.map((data) => (
-          <div className="item" key={data.id} onClick={() => handleClickOpen()} >
+          <div className="item" key={data.id} >
             <img src={data.img} alt="" />
             <h3>{data.title}</h3>
-            <div className="button">View Project</div>
+            <div className="buttonContainer">
+            <a className="button" href={data.git} title="Github" target="_blank" rel="noreferrer"> <GitHubIcon/> </a>
+            {data.demo &&
+            <a className="button" href={data.demo} title="Live Demo" target="_blank" rel="noreferrer"> <OpenInNewIcon/> </a>
+}
+            </div>
           </div>
         ))}
       </div>
-      <ProjectDialog handleClose={handleClose} setOpen={setOpen}  open={open} />
+      <ProjectDialog handleClose={handleClose} setOpen={setOpen}  open={open}  data={selectedData}/>
       <a className="arrow" href="#contact">
             <KeyboardArrowDownIcon />
           </a>

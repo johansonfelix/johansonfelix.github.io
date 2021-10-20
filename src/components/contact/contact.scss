@@ -37,6 +37,17 @@
 
   }
 
+  a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+
+    &:visited{
+      text-decoration: inherit;
+      color: inherit;
+    }
+  }
+
   div.buttons {
     flex-direction: column;
     color: $green;
@@ -54,7 +65,7 @@
   }
   .resumeButton {
     background-color: none;
-    color:$green;
+    color:$green !important ;
     border: 1px solid $green;
     border-radius: 4px;
     text-decoration: none;

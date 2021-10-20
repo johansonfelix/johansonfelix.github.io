@@ -44,11 +44,11 @@ const Intro = () => {
             </p>
 
             <div className="buttons">
-              <EmailIcon className="button" />
-              <GitHubIcon className="button" />
-              <LinkedInIcon className="button" />
+             <a href="mailto:felix.johanson@gmail.com"><EmailIcon className="button" /> </a>
+             <a href="https://github.com/johansonfelix" target="_blank" rel="noreferrer"> <GitHubIcon className="button" /> </a>
+              <a href="https://www.linkedin.com/in/johanson-felix-336a94186" target="_blank" rel="noreferrer"> <LinkedInIcon className="button" /></a>
             </div>
-            <a className="resumeButton button" href=" ">
+            <a className="resumeButton button" href="https://drive.google.com/file/d/1q4fQxpoLT-fAwp_zgEfbElbLzc2pXrNx/view?usp=sharing" target="_blank" rel="noreferrer">
               Resume
             </a>
           </div>
