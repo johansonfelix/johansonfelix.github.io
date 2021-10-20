@@ -18,7 +18,7 @@ const Contact = () => {
       <p className="text">
         I am currently looking for new opportunities. My inbox is always open.
         Whether you have a question or just want to say hi, or want to schedule
-        a coffee, I’ll try my best to get back to you!
+        a coffee. Let's connect !
       </p>
       <div className="buttons">
       <a href="mailto:felix.johanson@gmail.com"><EmailIcon className="button" /> </a>
