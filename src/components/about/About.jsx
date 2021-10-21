@@ -15,7 +15,7 @@ export default function About() {
           <p className="text2">
             My interest in Software/Web Development started when I was younger, wanting to be a scientist - to solve real world
             problems. My speciality is in building enterprise-level APIs using
-            the REST architecture. I am highly proficient in Java, JavaScript, and Python and have a great grasp of front-end technologies with practice in UI/UX. In my downtime I enjoy music, catching up on
+            the REST architecture. I am highly proficient in Java, JavaScript, and Python and I have a great grasp of front-end technologies with practice in UI/UX. In my downtime I enjoy music, catching up on
             my favorite Netflix drama series, meditating and trying new cuisine.
           </p>
           <div className="education">
